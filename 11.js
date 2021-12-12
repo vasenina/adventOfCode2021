@@ -1,7 +1,6 @@
 //2 parts completed!
 const path = "/data11.txt";
 var arr = [];
-const { countReset } = require("console");
 const fs = require("fs");
 
 fs.readFileSync(__dirname + path)
@@ -93,10 +92,9 @@ function make100steps(matrix) {
     let sumFlashes = 0;
     for (let k = 0; k < 100; k++) {
         sum += increase(matrix);
-        //console.log(`step ${k}`);
-        //console.log("count of visited", sumvisited(visited));
         clearvisited(visited);
         sumFlashes += countFlashes(matrix);
+        //console.log(`step ${k}`);
         //printMatrix(matrix);
         //console.log("-----");
     }
